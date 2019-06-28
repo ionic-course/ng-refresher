@@ -1,5 +1,15 @@
 # NgRefresher
 
+npm install -g @angular/cli
+
+cd .\ng-refresher\
+
+ng serve
+
+Para generar la distro:
+
+ng build
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.6.
 
 ## Development server
