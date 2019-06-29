@@ -1,3 +1,4 @@
+import { AppRoutingModule } from './app-routing.module';
 import { PersonInputComponent } from './persons/person-input.component';
 import { PersonsComponent } from './persons/persons.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,7 +12,7 @@ import { FormsModule } from '@angular/forms';
     AppComponent, PersonsComponent, PersonInputComponent
   ],
   imports: [
-    BrowserModule, FormsModule ],
+    BrowserModule, FormsModule, AppRoutingModule ],
   providers: [],
   bootstrap: [AppComponent]
 })
