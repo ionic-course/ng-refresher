@@ -7,7 +7,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './persons.component.html'
 })
 export class PersonsComponent implements OnInit, OnDestroy {
-  personList: string[];
+  personList: string[] = [];
   //private personService: PersonsService;
   private personListSubs: Subscription;
 
@@ -16,10 +16,11 @@ export class PersonsComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.personList = this.personService.persons;
+    //this.personList = this.personService.persons;
     this.personListSubs = this.personService.personsChanged.subscribe(persons=>{
       this.personList = persons;
     });
+    this.personService.fetchPersons();
   }
 
   ngOnDestroy() {
